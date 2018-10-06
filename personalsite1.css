@@ -1,0 +1,43 @@
+.middle {
+    border: 2px solid gray;
+    background-color: #151515;
+}
+tr {
+    border: 2px solid white;
+}
+p {
+    margin: 15px;
+    border: 0px solid white;
+}
+
+a:link {
+    color: white;
+}
+
+
+a:visited {
+    color:white;
+}
+
+a:hover {
+    color: white;
+}
+
+.alink {
+    color: white;
+    background-color: white;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+abody {
+    color: black;
+}
+
+img {
+    bordercolor: #293d38;
+}

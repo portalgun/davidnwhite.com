@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- 2018-10-06 Sat 13:44 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>&lrm;</title>
+    <meta name="generator" content="Org mode" />
+    <meta name="author" content="Dave White" />
+    <style type="text/css">
+      <!--/*--><![CDATA[/*><!--*/
+      .title  { text-align: center;
+                margin-bottom: .2em; }
+      .subtitle { text-align: center;
+                  font-size: medium;
+                  font-weight: bold;
+                  margin-top:0; }
+      .todo   { font-family: monospace; color: red; }
+      .done   { font-family: monospace; color: green; }
+      .priority { font-family: monospace; color: orange; }
+      .tag    { background-color: #eee; font-family: monospace;
+                padding: 2px; font-size: 80%; font-weight: normal; }
+      .timestamp { color: #bebebe; }
+      .timestamp-kwd { color: #5f9ea0; }
+      .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+      .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+      .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+      .underline { text-decoration: underline; }
+      #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+      p.verse { margin-left: 3%; }
+      pre {
+          border: 1px solid #ccc;
+          box-shadow: 3px 3px 3px #eee;
+          padding: 8pt;
+          font-family: monospace;
+          overflow: auto;
+          margin: 1.2em;
+      }
+      pre.src {
+          position: relative;
+          overflow: visible;
+          padding-top: 1.2em;
+      }
+      pre.src:before {
+          display: none;
+          position: absolute;
+          background-color: white;
+          top: -10px;
+          right: 10px;
+          padding: 3px;
+          border: 1px solid black;
+      }
+      pre.src:hover:before { display: inline;}
+      /* Languages per Org manual */
+      pre.src-asymptote:before { content: 'Asymptote'; }
+      pre.src-awk:before { content: 'Awk'; }
+      pre.src-C:before { content: 'C'; }
+      /* pre.src-C++ doesn't work in CSS */
+      pre.src-clojure:before { content: 'Clojure'; }
+      pre.src-css:before { content: 'CSS'; }
+      pre.src-D:before { content: 'D'; }
+      pre.src-ditaa:before { content: 'ditaa'; }
+      pre.src-dot:before { content: 'Graphviz'; }
+      pre.src-calc:before { content: 'Emacs Calc'; }
+      pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+      pre.src-fortran:before { content: 'Fortran'; }
+      pre.src-gnuplot:before { content: 'gnuplot'; }
+      pre.src-haskell:before { content: 'Haskell'; }
+      pre.src-hledger:before { content: 'hledger'; }
+      pre.src-java:before { content: 'Java'; }
+      pre.src-js:before { content: 'Javascript'; }
+      pre.src-latex:before { content: 'LaTeX'; }
+      pre.src-ledger:before { content: 'Ledger'; }
+      pre.src-lisp:before { content: 'Lisp'; }
+      pre.src-lilypond:before { content: 'Lilypond'; }
+      pre.src-lua:before { content: 'Lua'; }
+      pre.src-matlab:before { content: 'MATLAB'; }
+      pre.src-mscgen:before { content: 'Mscgen'; }
+      pre.src-ocaml:before { content: 'Objective Caml'; }
+      pre.src-octave:before { content: 'Octave'; }
+      pre.src-org:before { content: 'Org mode'; }
+      pre.src-oz:before { content: 'OZ'; }
+      pre.src-plantuml:before { content: 'Plantuml'; }
+      pre.src-processing:before { content: 'Processing.js'; }
+      pre.src-python:before { content: 'Python'; }
+      pre.src-R:before { content: 'R'; }
+      pre.src-ruby:before { content: 'Ruby'; }
+      pre.src-sass:before { content: 'Sass'; }
+      pre.src-scheme:before { content: 'Scheme'; }
+      pre.src-screen:before { content: 'Gnu Screen'; }
+      pre.src-sed:before { content: 'Sed'; }
+      pre.src-sh:before { content: 'shell'; }
+      pre.src-sql:before { content: 'SQL'; }
+      pre.src-sqlite:before { content: 'SQLite'; }
+      /* additional languages in org.el's org-babel-load-languages alist */
+      pre.src-forth:before { content: 'Forth'; }
+      pre.src-io:before { content: 'IO'; }
+      pre.src-J:before { content: 'J'; }
+      pre.src-makefile:before { content: 'Makefile'; }
+      pre.src-maxima:before { content: 'Maxima'; }
+      pre.src-perl:before { content: 'Perl'; }
+      pre.src-picolisp:before { content: 'Pico Lisp'; }
+      pre.src-scala:before { content: 'Scala'; }
+      pre.src-shell:before { content: 'Shell Script'; }
+      pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+      /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+      pre.src-cpp:before  { content: 'C++'; }
+      pre.src-abc:before  { content: 'ABC'; }
+      pre.src-coq:before  { content: 'Coq'; }
+      pre.src-groovy:before  { content: 'Groovy'; }
+      /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+      pre.src-bash:before  { content: 'bash'; }
+      pre.src-csh:before  { content: 'csh'; }
+      pre.src-ash:before  { content: 'ash'; }
+      pre.src-dash:before  { content: 'dash'; }
+      pre.src-ksh:before  { content: 'ksh'; }
+      pre.src-mksh:before  { content: 'mksh'; }
+      pre.src-posh:before  { content: 'posh'; }
+      /* Additional Emacs modes also supported by the LaTeX listings package */
+      pre.src-ada:before { content: 'Ada'; }
+      pre.src-asm:before { content: 'Assembler'; }
+      pre.src-caml:before { content: 'Caml'; }
+      pre.src-delphi:before { content: 'Delphi'; }
+      pre.src-html:before { content: 'HTML'; }
+      pre.src-idl:before { content: 'IDL'; }
+      pre.src-mercury:before { content: 'Mercury'; }
+      pre.src-metapost:before { content: 'MetaPost'; }
+      pre.src-modula-2:before { content: 'Modula-2'; }
+      pre.src-pascal:before { content: 'Pascal'; }
+      pre.src-ps:before { content: 'PostScript'; }
+      pre.src-prolog:before { content: 'Prolog'; }
+      pre.src-simula:before { content: 'Simula'; }
+      pre.src-tcl:before { content: 'tcl'; }
+      pre.src-tex:before { content: 'TeX'; }
+      pre.src-plain-tex:before { content: 'Plain TeX'; }
+      pre.src-verilog:before { content: 'Verilog'; }
+      pre.src-vhdl:before { content: 'VHDL'; }
+      pre.src-xml:before { content: 'XML'; }
+      pre.src-nxml:before { content: 'XML'; }
+      /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+      pre.src-conf:before { content: 'Configuration File'; }
+
+      table { border-collapse:collapse; }
+      caption.t-above { caption-side: top; }
+      caption.t-bottom { caption-side: bottom; }
+      td, th { vertical-align:top;  }
+      th.org-right  { text-align: center;  }
+      th.org-left   { text-align: center;   }
+      th.org-center { text-align: center; }
+      td.org-right  { text-align: right;  }
+      td.org-left   { text-align: left;   }
+      td.org-center { text-align: center; }
+      dt { font-weight: bold; }
+      .footpara { display: inline; }
+      .footdef  { margin-bottom: 1em; }
+      .figure { padding: 1em; }
+      .figure p { text-align: center; }
+      .inlinetask {
+          padding: 10px;
+          border: 2px solid gray;
+          margin: 10px;
+          background: #ffffcc;
+      }
+      #org-div-home-and-up
+      { text-align: right; font-size: 70%; white-space: nowrap; }
+      textarea { overflow-x: auto; }
+      .linenr { font-size: smaller }
+      .code-highlighted { background-color: #ffff00; }
+      .org-info-js_info-navigation { border-style: none; }
+      #org-info-js_console-label
+      { font-size: 10px; font-weight: bold; white-space: nowrap; }
+      .org-info-js_search-highlight
+      { background-color: #ffff00; color: #000000; font-weight: bold; }
+      .org-svg { width: 90%; }
+      /*]]>*/-->
+    </style>
+    <script type="text/javascript">
+      /*
+       @licstart  The following is the entire license notice for the
+       JavaScript code in this tag.
+
+       Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+       The JavaScript code in this tag is free software: you can
+       redistribute it and/or modify it under the terms of the GNU
+       General Public License (GNU GPL) as published by the Free Software
+       Foundation, either version 3 of the License, or (at your option)
+       any later version.  The code is distributed WITHOUT ANY WARRANTY;
+       without even the implied warranty of MERCHANTABILITY or FITNESS
+       FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+       As additional permission under GNU GPL version 3 section 7, you
+       may distribute non-source (e.g., minimized or compacted) forms of
+       that code without the copy of the GNU GPL normally required by
+       section 4, provided you include this license notice and a URL
+       through which recipients can access the Corresponding Source.
+
+
+       @licend  The above is the entire license notice
+       for the JavaScript code in this tag.
+      */
+    <!--/*--><![CDATA[/*><!--*/
+      function CodeHighlightOn(elem, id)
+      {
+          var target = document.getElementById(id);
+          if(null != target) {
+              elem.cacheClassElem = elem.className;
+              elem.cacheClassTarget = target.className;
+              target.className = "code-highlighted";
+              elem.className   = "code-highlighted";
+          }
+      }
+      function CodeHighlightOff(elem, id)
+      {
+          var target = document.getElementById(id);
+          if(elem.cacheClassElem)
+              elem.className = elem.cacheClassElem;
+          if(elem.cacheClassTarget)
+              target.className = elem.cacheClassTarget;
+      }
+      /*]]>*///-->
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <div id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <div id="text-table-of-contents">
+          <ul>
+            <li><a href="#orgac7e172">1. Part 2</a>
+              <ul>
+                <li><a href="#org2ba1ae4">1.1. Editor</a></li>
+                <li><a href="#org1c7e120">1.2. Writing Scripts</a></li>
+                <li><a href="#org63f9dbc">1.3. Writing Functions</a>
+                  <ul>
+                    <li><a href="#orgb247e55">1.3.1. EXERCISE, Solve quadratic equation</a></li>
+                  </ul>
+                </li>
+                <li><a href="#orgd31aa7d">1.4. Conditional statements</a></li>
+                <li><a href="#orgd41977e">1.5. Switch case</a></li>
+                <li><a href="#orgd071887">1.6. For Loops</a></li>
+                <li><a href="#org2df0bb0">1.7. While loops</a></li>
+                <li><a href="#org86b9efb">1.8. Debugging Basics</a></li>
+                <li><a href="#org85d22d1">1.9. Error handling</a></li>
+                <li><a href="#org544c690">1.10. dbstop etc</a></li>
+                <li><a href="#org2832c07">1.11. Statistics</a></li>
+                <li><a href="#orge5bffd3">1.12. Input output handling</a></li>
+                <li><a href="#org80b3ee2">1.13. Parallelization</a></li>
+                <li><a href="#org9631aee">1.14. Path</a></li>
+                <li><a href="#orgb001fbf">1.15. misc</a></li>
+                <li><a href="#orgb6bd0e2">1.16. Intro to object oriented programming</a></li>
+                <li><a href="#org7be119e">1.17. in class projects</a></li>
+                <li><a href="#orgb819a08">1.18. Conclusion</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="outline-container-orgac7e172" class="outline-2">
+        <h2 id="orgac7e172"><span class="section-number-2">1</span> Part 2</h2>
+        <div class="outline-text-2" id="text-1">
+        </div>
+        <div id="outline-container-org2ba1ae4" class="outline-3">
+          <h3 id="org2ba1ae4"><span class="section-number-3">1.1</span> Editor</h3>
+          <div class="outline-text-3" id="text-1-1">
+            <p>
+              more than just a couple of semicolons, use the editor<br />
+              indentation is good form, but not required<br />
+              tabs or spaces?&#x2026;<br />
+              Run<br />
+              Comments - %<br />
+              continue on next line &#x2026;<br />
+              Sections - %%<br />
+              Run section<br />
+              be nice to your future self and others - comment and format your code to look nice<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org1c7e120" class="outline-3">
+          <h3 id="org1c7e120"><span class="section-number-3">1.2</span> Writing Scripts</h3>
+          <div class="outline-text-3" id="text-1-2">
+            <p>
+              Runs just like inputting a bunch of commands in the commandline<br />
+              all variables will end up in your workspace<br />
+              Writing a script is the best way to begin writing a function<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org63f9dbc" class="outline-3">
+          <h3 id="org63f9dbc"><span class="section-number-3">1.3</span> Writing Functions</h3>
+          <div class="outline-text-3" id="text-1-3">
+            <p>
+              a command with an input and output<br />
+              functions for just about every essential mathematical operation<br />
+              difference between a function and a script<br />
+              different workspaces<br />
+              writing a function, start out in a script then make it a function<br />
+            </p>
+
+            <p>
+              <b>name of function needs to be the same as the filename</b><br />
+              comment section<br />
+              function syntax<br />
+              multiple functions<br />
+            </p>
+
+            <p>
+              if you have multiple functions of the same name, matlab will choose for you without warning<br />
+              show example test1.m directory/test1.m<br />
+              which function<br />
+            </p>
+
+            <p>
+              SHOW EXAMPLE FUNCTIONS<br />
+              daVinciPatchFname.m<br />
+              divisor.m<br />
+              fouriercon.m<br />
+              plotting at the end<br />
+              loadLRSIimage.m<br />
+              good comment section<br />
+              good input handling<br />
+            </p>
+
+            <p>
+              multiple functions<br />
+            </p>
+          </div>
+          <div id="outline-container-orgb247e55" class="outline-4">
+            <h4 id="orgb247e55"><span class="section-number-4">1.3.1</span> EXERCISE, Solve quadratic equation</h4>
+            <div class="outline-text-4" id="text-1-3-1">
+              <p>
+                function [ansP, ansN] = quadratic(a,b,c)<br />
+                % solve for both solutions of quadratic equation<br />
+                ansP = -b + sqrt(b<sup>2</sup>-4*a*c)/(2*a)<br />
+                ansN = -b - sqrt(b<sup>2</sup>-4*a*c)/(2*a)<br />
+              </p>
+
+              <p>
+                OR<br />
+              </p>
+
+              <p>
+                function [Ans] = quadratic(a,b,c)<br />
+                % solve for both solutions of quadratic equation<br />
+                Ans=zeros(2,1)<br />
+                Ans(1) = -b + sqrt(b<sup>2</sup>-4*a*c)/(2*a)<br />
+                Ans(2) = -b - sqrt(b<sup>2</sup>-4*a*c)/(2*a)<br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="outline-container-orgd31aa7d" class="outline-3">
+          <h3 id="orgd31aa7d"><span class="section-number-3">1.4</span> Conditional statements</h3>
+          <div class="outline-text-3" id="text-1-4">
+            <p>
+              can also do in multiple lines<br />
+              a=3;<br />
+              b=3;<br />
+              if a==b; disp('These are the same'); elseif a==(b*-1); disp('These have the same magnitude'); else; disp('these are not the same'); end<br />
+              hard to read. can do this in mulitple lines<br />
+            </p>
+
+            <p>
+              if a==b %no semicolon requred<br />
+              disp('These are the same')<br />
+              elseif a==(b*-1) %no semicolon requred<br />
+              disp('These have the same magnitude');<br />
+              else %no semicolon requred<br />
+              disp('these are not the same');<br />
+              end<br />
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-orgd41977e" class="outline-3">
+          <h3 id="orgd41977e"><span class="section-number-3">1.5</span> Switch case</h3>
+          <div class="outline-text-3" id="text-1-5">
+            <p>
+              var=randi(10,1)<br />
+              switch var<br />
+              case 1<br />
+              text=('one')<br />
+              case {2,3}<br />
+              text=('2 or 3')<br />
+              case {4}<br />
+              text=('4')<br />
+              case 5<br />
+              text=('5')<br />
+              otherwise<br />
+              text=('greater than 5')<br />
+              end<br />
+            </p>
+
+            <p>
+              name='Dave';<br />
+              switch name<br />
+              case 'Dave'<br />
+              num=1<br />
+              case 'Michael'<br />
+              num=2<br />
+              otherwise<br />
+              num=3<br />
+              end<br />
+            </p>
+
+            <p>
+              <b>return to while example</b><br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orgd071887" class="outline-3">
+          <h3 id="orgd071887"><span class="section-number-3">1.6</span> For Loops</h3>
+          <div class="outline-text-3" id="text-1-6">
+            <p>
+              assigning a temporary variable from a row vector on each iteration<br />
+              3 statement minimum<br />
+              for i = 1:9; b=b+1; end;<br />
+            </p>
+
+            <p>
+              can also do in multiple lines<br />
+              b=0;<br />
+              for i = 1:9 % <b>no semicolon required</b><br />
+              i<br />
+              b=b+2<br />
+              end<br />
+            </p>
+
+            <p>
+              A=ones(10,1)<br />
+              range=1:9<br />
+              B=zeros(length(A),length(range));<br />
+              for i = range<br />
+              B(:,i)=A*i;<br />
+              end<br />
+            </p>
+
+            <p>
+              s = 10;<br />
+              H = zeros(s);<br />
+              for c = 1:s<br />
+              for r = 1:s<br />
+              H(r,c) = 1/(r+c-1);<br />
+              end<br />
+              end<br />
+            </p>
+
+            <p>
+              preallocating - why?<br />
+              more likely to spit out an error if something goes wrong (wrong sizes)<br />
+              memory is preallocated, so you don't have to wait for the loop to return an error<br />
+            </p>
+
+            <p>
+              A=rand(10);<br />
+              B=zeros(size(A,1),size(A,2),2)<br />
+              for i = 1:size(A,1)<br />
+              B(i,:,1)=A(i,:)<br />
+              B(i,:,2)=A(i,:)+3./2<br />
+              end<br />
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org2df0bb0" class="outline-3">
+          <h3 id="org2df0bb0"><span class="section-number-3">1.7</span> While loops</h3>
+          <div class="outline-text-3" id="text-1-7">
+            <p>
+              i=1<br />
+              while true<br />
+              i=i+1<br />
+              end<br />
+            </p>
+
+            <p>
+              run until some condition is no longer met<br />
+              a=10<br />
+              b=1<br />
+              while a&gt;b<br />
+              b=b+1<br />
+              end<br />
+            </p>
+
+            <p>
+              run until some condition is met<br />
+              a=10<br />
+              b=1<br />
+              while true<br />
+              b=b+1<br />
+              if a==b<br />
+              break<br />
+              end<br />
+              end<br />
+            </p>
+
+            <p>
+              OR<br />
+            </p>
+
+            <p>
+              a=10<br />
+              b=1<br />
+              while true<br />
+              b=b+1<br />
+              if a~=b<br />
+              continue<br />
+              end<br />
+              break<br />
+              end<br />
+            </p>
+
+            <p>
+              break<br />
+              continue<br />
+              also work in for loops<br />
+            </p>
+
+            <p>
+              while true<br />
+              response=input('What is your age? ','s')<br />
+              age=num2str(response)<br />
+              if age &lt; 0<br />
+              disp('I do not believe that you are from the future.')<br />
+              continue<br />
+              end<br />
+              break<br />
+              end<br />
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org86b9efb" class="outline-3">
+          <h3 id="org86b9efb"><span class="section-number-3">1.8</span> Debugging Basics</h3>
+          <div class="outline-text-3" id="text-1-8">
+            <p>
+              When traceback is not clear<br />
+              Commenting out code<br />
+              printing and non semi-colon<br />
+              More advanced in next lecture<br />
+              Most common errors<br />
+              closing a bracket or parenthesis<br />
+              indexing/subscripting -&gt; trying to fit wrong dimension<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org85d22d1" class="outline-3">
+          <h3 id="org85d22d1"><span class="section-number-3">1.9</span> Error handling</h3>
+          <div class="outline-text-3" id="text-1-9">
+            <p>
+              try; catch ME; rethrow(ME); end<br />
+            </p>
+
+            <p>
+              A=[1 3 4];<br />
+              B=[1 3 4];<br />
+            </p>
+
+            <p>
+              A=[1 3 4];<br />
+              B=[1 3 4 4];<br />
+            </p>
+
+            <p>
+              try<br />
+              A*B<br />
+              break<br />
+              catch ME<br />
+              if (strcmp(ME.identifier,'MATLAB:innerdim'))<br />
+              B=B';<br />
+              A*B<br />
+              else<br />
+              rethrow(ME)<br />
+              end<br />
+              end<br />
+            </p>
+
+            <p>
+              try<br />
+              end<br />
+            </p>
+
+            <p>
+              ME.message<br />
+              struct -&gt; variable with properties<br />
+              isfield(ME,'message')<br />
+              properties can have proprties<br />
+              properties can be any datatype<br />
+              warning<br />
+              error<br />
+              assert -&gt; throw error if condition is not met<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org544c690" class="outline-3">
+          <h3 id="org544c690"><span class="section-number-3">1.10</span> dbstop etc</h3>
+          <div class="outline-text-3" id="text-1-10">
+            <p>
+              profile<br />
+              dbstop in function<br />
+              dbstop in function at line<br />
+              dbstop if error<br />
+              dbcont<br />
+              dbstep<br />
+              dbstack<br />
+              dbstatus<br />
+              dbclear<br />
+              error<br />
+              warning<br />
+              movies<br />
+              for<br />
+              draw now<br />
+              pause(.1)<br />
+              end<br />
+            </p>
+
+
+            <p>
+              keys.space=32; %Space<br />
+              keys.L=28; %LEFT<br />
+              keys.R=29; %RIGHT<br />
+              keys.U=30; %UP<br />
+              keys.D=31; %DOWN<br />
+              keys.r=114; %DOWN<br />
+              keys.esc=27;<br />
+              keys.zero=48;<br />
+              for<br />
+              draw now<br />
+              k = double(get(gcf,'CurrentCharacter')); % NOTE uncomment to see keycodes on keypress<br />
+              end<br />
+            </p>
+          </div>
+        </div>
+
+        <div id="outline-container-org2832c07" class="outline-3">
+          <h3 id="org2832c07"><span class="section-number-3">1.11</span> Statistics</h3>
+          <div class="outline-text-3" id="text-1-11">
+            <p>
+              smp=rand(10000,1);<br />
+              histogram(smp,20)<br />
+            </p>
+
+            <p>
+              smp=normrnd(2,3,[10000,1]);<br />
+              histogram(smp);<br />
+              mvnrand<br />
+            </p>
+
+            <p>
+              m=linspace(-5,10,50);<br />
+              Mu=2<br />
+              Sigma=1.5<br />
+              p=normpdf(m,Mu,Sigma)<br />
+              plot(p)<br />
+            </p>
+
+            <p>
+              P=normcdf(m,Mu,Sigma)<br />
+              plot(P)<br />
+            </p>
+
+            <p>
+              %putting it all together<br />
+              function [p]=mvn()<br />
+            </p>
+
+            <p>
+              m=linspace(-5,5,50);<br />
+              Mu=[0 0]<br />
+              if ~exist('Sigma','var')<br />
+              Sigma=[1  0; &#x2026;<br />
+              0  1];<br />
+              end<br />
+              nM=length(m);<br />
+              [M1,M2]=meshgrid(m);<br />
+              p=mvnpdf([M1(:) M2(:)],Mu,Sigma);<br />
+              p=reshape(p,nM,nM);<br />
+            </p>
+
+            <p>
+              figure(938)<br />
+              subplot(1,2,1)<br />
+              imagesc(p)<br />
+              axis square<br />
+            </p>
+
+            <p>
+              subplot(1,2,2)<br />
+              surf(p)<br />
+              axis square<br />
+              colormap summer<br />
+            </p>
+
+
+            <p>
+              fmincon - one of the hardest matlab function to use<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orge5bffd3" class="outline-3">
+          <h3 id="orge5bffd3"><span class="section-number-3">1.12</span> Input output handling</h3>
+          <div class="outline-text-3" id="text-1-12">
+            <p>
+              defaults<br />
+              isempty<br />
+              exist<br />
+              scope<br />
+              assignin -&gt; send variable from one workspace to another<br />
+              assignin('base','A<sub>base</sub>',A<sub>fcn</sub>)<br />
+              evalin   -&gt; run an experession in another workspace<br />
+              within function<br />
+              evalin('base','A=num2str(A)')<br />
+              Global - don't use just because it is easy<br />
+              static<br />
+              varargin varargout<br />
+              structs<br />
+              input parsing<br />
+            </p>
+
+            <p>
+              functionA('variableA',varWhatever)<br />
+            </p>
+
+            <p>
+              functionA(varargin)<br />
+              p = inputParser('variableA',variableA);<br />
+              p.addParameter('variableA','',@ischar);<br />
+              variableA          =p.Results.variableA;<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org80b3ee2" class="outline-3">
+          <h3 id="org80b3ee2"><span class="section-number-3">1.13</span> Parallelization</h3>
+          <div class="outline-text-3" id="text-1-13">
+            <p>
+              servers/clusters<br />
+              bash (shell)<br />
+              nodesktop mode<br />
+              need a different editor<br />
+              nano<br />
+              *vim - universal (steep learning curve)<br />
+              *emacs - keybindings in terminal (steep learning curve)<br />
+              directory commands<br />
+              ls<br />
+              pwd<br />
+              move<br />
+              mkdir<br />
+              system calls<br />
+              parfor variables<br />
+              rules:<br />
+              Only 1 parfor at a time<br />
+              parfor; parfor; end; end<br />
+              independent (variables must not depend on previous interation)<br />
+              parfor t=1:10; x=(t-1); end<br />
+              increasing, positive, integer<br />
+              no breaks<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org9631aee" class="outline-3">
+          <h3 id="org9631aee"><span class="section-number-3">1.14</span> Path</h3>
+          <div class="outline-text-3" id="text-1-14">
+            <p>
+              path<br />
+              addpath<br />
+              genpath<br />
+              path<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orgb001fbf" class="outline-3">
+          <h3 id="orgb001fbf"><span class="section-number-3">1.15</span> misc</h3>
+          <div class="outline-text-3" id="text-1-15">
+            <p>
+              rand(10)<br />
+              rng('shuffle')<br />
+              rand(10)<br />
+            </p>
+
+            <p>
+              rng(2)<br />
+              rand(10)<br />
+              rng(2)<br />
+              rand(10)<br />
+            </p>
+
+            <p>
+              short-circuits &amp;&amp; and ||<br />
+            </p>
+
+            <p>
+              changes properties of figure objects<br />
+              f=figure(1)<br />
+              gca - axes<br />
+              gcf - figure<br />
+              set<br />
+              get<br />
+            </p>
+
+            <p>
+              get(gcf,'CurrentCharacter')<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orgb6bd0e2" class="outline-3">
+          <h3 id="orgb6bd0e2"><span class="section-number-3">1.16</span> Intro to object oriented programming</h3>
+          <div class="outline-text-3" id="text-1-16">
+            <p>
+              classes - custom data structures<br />
+              objects - variables created from a class<br />
+              properties - variables nested within a class<br />
+              modules - subroutines of a class<br />
+              Matlab has objects, but is not object oriented<br />
+              example:<br />
+              varA="this is a string"<br />
+              python:<br />
+              out=varA.split()<br />
+              out=["this", "is", "a, "string"]<br />
+              matlab;<br />
+              out=strsplit(varA)<br />
+              out=["this", "is", "a, "string"]<br />
+              Matlab is function oriented with heavy struct usage<br />
+            </p>
+
+            <p>
+              classdef<br />
+              properties<br />
+              var1<br />
+              var2<br />
+              end<br />
+              methods<br />
+              function<br />
+              end<br />
+              function<br />
+              end<br />
+              end<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org7be119e" class="outline-3">
+          <h3 id="org7be119e"><span class="section-number-3">1.17</span> in class projects</h3>
+          <div class="outline-text-3" id="text-1-17">
+            <p>
+              a function that returns all divisors of a given number<br />
+              plot 1/x, but at x=zero plot a point at zero (hint: need to use plot &amp; scatter)<br />
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orgb819a08" class="outline-3">
+          <h3 id="orgb819a08"><span class="section-number-3">1.18</span> Conclusion</h3>
+          <div class="outline-text-3" id="text-1-18">
+            <p>
+              Everything else is just functions<br />
+              fmincon - optimization - most advanced<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="postamble" class="status">
+      <p class="author">Author: Dave White</p>
+      <p class="date">Created: 2018-10-06 Sat 13:44</p>
+      <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+    </div>
+  </body>
+</html>
