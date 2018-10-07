@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -23,7 +22,7 @@
         <a href="research.html">Research</a> |
         <a href="img/dnw_cv.pdf">CV</a> |
         <a href="https://gitlab.com/opensourcedave">Code</a> |
-        <a href="resources.html">Resources</a>
+        <a href="resources.php">Resources</a>
       </p>
       </td>
       <td colspan=2></td>
@@ -39,8 +38,19 @@
     <td colspan=2 width=840">
       <p align="left">
         <ul style="list-style-type:none">
-            <li><a style="color: white;" href="resources/matlab1.html">Matlab course - part 1</a></li>
-            <li><a style="color: white;" href="resources/matlab2.html">Matlab course - part 2</a></li>
+             <?php
+             $dir_open = opendir('resources');
+             while(false !== ($filename = readdir($dir_open))){
+                 if($filename != "." && $filename != ".." && $filename != "img" ){
+                     $path_parts = pathinfo($filename);
+		     $fn=$path_parts['filename'];
+		     $fn=str_replace("_"," ",$fn);
+                     $link = "<a href='resources/$filename'> $fn </a><br />";
+                     echo $link;
+                 }
+             }
+             closedir($dir_open);
+             ?>
         </ul>
       </p>
     </td>
